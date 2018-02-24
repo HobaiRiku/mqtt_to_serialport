@@ -16,7 +16,6 @@ const baudRate = config.baudRate&&typeof(config.baudRate)=='number'?config.baudR
 const dataBits = config.dataBits&&typeof(config.dataBits)=='number'?config.dataBits:configError('error:配置\'dataBits\'不存在或格式错误')
 const parity = config.parity&&typeof(config.parity)=='string'?config.parity:configError('error:配置\'parity\'不存在或格式错误')
 const stopBits = config.stopBits&&typeof(config.stopBits)=='number'?config.stopBits:configError('error:配置\'stopBits\'不存在或格式错误')
-
 const mqttClient = Mqtt.connect(mqttServer)
 console.log(new Date()+":"+'MQTT客户端连接'+mqttServer.split('@')[1])
 let topic = ""
@@ -43,7 +42,6 @@ let serialPort = new SerialPort(
             console.log(new Date() + ':' + "打开串口端口" + serialPortName + "成功,等待数据发送");
         }
     });
-
 mqttClient.subscribe(topic);
 console.log(new Date()+":"+"订阅topic:"+topic)
 mqttClient.on('message', function (topic, message) {
@@ -62,8 +60,6 @@ mqttClient.on('message', function (topic, message) {
         }
     });
   })
-
-
 function configError (msg){
     console.log(new Date() + ':' + msg)
     process.exit(1);
