@@ -1,6 +1,6 @@
 module.exports ={
     //lora服务器mqtt连接地址
-    mqttServer:'mqtt://loraroot:lorarootreach@124.72.95.198',
+    mqttServer:'mqtt://loradev01:loradev01reach@124.72.95.198',
     //lora设备在lora服务端中的应用ID
     appID:'1',
     //lora设备ID
