@@ -1,0 +1,27 @@
+{
+  "name": "mqtt_to_serialport",
+  "version": "1.0.0",
+  "description": "将mqtt消息转发至串口",
+  "main": "mqtt_to_serial.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HobaiRiku/mqtt_to_serialport.git"
+  },
+  "keywords": [
+    "mqtt",
+    "serialport"
+  ],
+  "author": "hobairiku",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HobaiRiku/mqtt_to_serialport/issues"
+  },
+  "homepage": "https://github.com/HobaiRiku/mqtt_to_serialport#readme",
+  "dependencies": {
+    "mqtt": "^2.15.3",
+    "serialport": "^6.0.5"
+  }
+}
