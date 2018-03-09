@@ -52,7 +52,7 @@ mqttClient.on('message', function (topic, message) {
     for(let one of data){
         serial_data_arr.push(parseInt(one,16));
     } 
-    let data_send = new Buffer(serial_data_arr)
+    let data_send = new Buffer(serial_data_arr);
     serialPort.write(data_send, function (error) {
         if (error) console.log(new Date() + ':' + '数据发送出错');
         else {
